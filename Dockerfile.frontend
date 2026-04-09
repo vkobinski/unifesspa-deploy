@@ -9,6 +9,7 @@ RUN pnpm install --frozen-lockfile
 
 COPY . .
 
+RUN pnpm relay
 RUN pnpm build
 
 FROM nginx:alpine
