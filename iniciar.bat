@@ -49,6 +49,7 @@ echo [3/4] Copiando arquivos de configuracao...
 copy /Y Dockerfile.backend back\Dockerfile >nul
 copy /Y Dockerfile.frontend front\Dockerfile >nul
 copy /Y nginx.conf front\nginx.conf >nul
+copy /Y back\schemas\unifesspa\schema.graphql front\schema.graphql >nul
 
 echo [4/4] Iniciando os servicos com Docker...
 echo      Isso pode demorar alguns minutos na primeira vez.

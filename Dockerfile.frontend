@@ -9,6 +9,9 @@ RUN pnpm install --frozen-lockfile
 
 COPY . .
 
+COPY schema.graphql /app/schema.graphql
+RUN sed -i "s|'../back/schemas/unifesspa/schema.graphql'|'./schema.graphql'|" /app/relay.config.js
+
 RUN pnpm relay
 RUN pnpm build
 
